@@ -149,6 +149,7 @@ console.log("Average change: $"+ str);
 
 var highestIncrease = 0;
 var indexOfhighestIncrease = 0;
+var dateOfhighestIncrease = 0;
 
 for (var i = 0; i < finances.length; i++) {
     var lastIncrease;
@@ -161,9 +162,10 @@ for (var i = 0; i < finances.length; i++) {
   if (currentIncrease > highestIncrease) {
     highestIncrease = currentIncrease;
     indexOfhighestIncrease = i;
+    dateOfhighestIncrease = finances[i][0];
   }
 }
- console.log("Greatest Increase in Profits: " + `${finances[indexOfhighestIncrease]}` + " ($" + highestIncrease + ")");
+ console.log("Greatest Increase in Profits: " + `${dateOfhighestIncrease}` + " ($" + highestIncrease + ")");
 
 
 
