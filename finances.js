@@ -148,6 +148,7 @@ console.log("Average change: $"+ str);
 //} end Natalie
 
 var highestIncrease = 0;
+var indexOfhighestIncrease = 0;
 
 for (var i = 0; i < finances.length; i++) {
     var lastIncrease;
@@ -159,9 +160,10 @@ for (var i = 0; i < finances.length; i++) {
   var currentIncrease = finances[i][1] - lastIncrease;
   if (currentIncrease > highestIncrease) {
     highestIncrease = currentIncrease;
+    indexOfhighestIncrease = i;
   }
 }
- console.log("Greatest Increase in Profits: " + highestIncrease);
+ console.log("Greatest Increase in Profits: " + `${finances[indexOfhighestIncrease]}` + " ($" + highestIncrease + ")");
 
 
 
