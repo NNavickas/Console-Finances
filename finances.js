@@ -101,7 +101,7 @@ for (var i = 0; i < finances.length; i++) {
     netTotal += finances[i][1];
 }
 
-console.log(netTotal);
+console.log("Total: $" + netTotal);
 
 // The average of the changes in Profit/Losses over the entire period.
 // calculate each change by subtracting the previous month from this month
@@ -119,15 +119,49 @@ var sum = changes.reduce(function(total, currentValue) {
     return total + currentValue;
 }, 0);
 
-var average = sum / (changes.length);
+var average = sum / (changes.length - 1);
 
-console.log(average);
+const str = average.toFixed(2);
+
+console.log("Average change: $"+ str);
 
 
 // The greatest increase in profits (date and amount) over the entire period.
 // start with 0
 //   check the last increase. If it's bigger than 0, keep track of the new biggest one.
 //   in a loop
+
+ //console.log(Math.max(...changes));
+
+ //Natalie 
+ //var lastIncrease = 0;
+ //var highestIncrease = 0;
+ //var lastIncrease = 
+
+//for (var i = 1; i < finances.length; i++) {
+    //var currentIncrease = finances[i][1] - finances[i - 1][1];
+   // if (currentIncrease > lastIncrease) {
+        //highestIncrease = currentIncrease;
+        //highestIncrease.push(currentIncrease);
+   // }
+    
+//} end Natalie
+
+var highestIncrease = 0;
+
+for (var i = 0; i < finances.length; i++) {
+    var lastIncrease;
+  if (i > 0) {
+    lastIncrease = finances[i - 1][1];
+  } else {
+    lastIncrease = 0;
+  }
+  var currentIncrease = finances[i][1] - lastIncrease;
+  if (currentIncrease > highestIncrease) {
+    highestIncrease = currentIncrease;
+  }
+}
+ console.log("Greatest Increase in Profits: " + highestIncrease);
 
 
 
