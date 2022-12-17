@@ -97,6 +97,7 @@ console.log("----------------------------");
 console.log("Total Months: " + finances.length);
 
 // The net total amount of Profit/Losses over the entire period.
+// Loops through, adding all the values to aggregate the net total.
 
 var netTotal = 0;
 
@@ -107,6 +108,8 @@ for (var i = 0; i < finances.length; i++) {
 console.log("Total: $" + netTotal);
 
 // The average of the changes in Profit/Losses over the entire period.
+// Loops through to calculate the differences between the current and previous month and adds all the values together. Then changes.length is decreased by one before being used to divide the sum by.
+// Value changed to 2dp output using const & .toFixed
 
 var changes = [];
 
@@ -126,6 +129,7 @@ const str = average.toFixed(2);
 console.log("Average change: $" + str);
 
 // The greatest increase in profits (date and amount) over the entire period.
+// Index of and date of highest increase in array position 0 required to ensure the date logged in the output. Loops through calculating the difference between current and previous month. If current difference is higher, then it replaces is in the var highestIncrease
 
 var highestIncrease = 0;
 var indexOfhighestIncrease = 0;
@@ -154,6 +158,7 @@ console.log(
 );
 
 // The greatest decrease in losses (date and amount) over the entire period.
+// Inverse of the above - changes the wording in the variables to ensure there's no confusion
 
 var greatestDecrease = 0;
 var indexOfgreatestDecrease = 0;
