@@ -119,7 +119,7 @@ var sum = changes.reduce(function (total, currentValue) {
   return total + currentValue;
 }, 0);
 
-var average = sum / (changes.length - 1);
+var average = sum / (changes.length);
 
 const str = average.toFixed(2);
 
