@@ -36,6 +36,8 @@ This homework is graded based on the following criteria:
 
 ✔️ Repository contains quality readme with description, screenshot, link to deployed application.
 
+![Screenshot of the desired console output by Natalie Navickas](./images/Screenshot.PNG)
+
 ## Review
 
 You are required to submit BOTH of the following for review:
